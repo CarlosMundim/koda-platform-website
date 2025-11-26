@@ -1,0 +1,310 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ============================================ */
+  /* WA-INSPIRED CORPORATE PALETTE v1.1          */
+  /* Japanese Corporate Aesthetic - Nov 26, 2025 */
+  /* Ma (間) - Embrace negative space            */
+  /* Kanso (簡素) - Simplicity                   */
+  /* Seijaku (静寂) - Tranquility               */
+  /* ============================================ */
+
+  /* Primary Brand - Use Sparingly */
+  --solunai-blaze: #f5480a;        /* Bold Orange - Primary CTAs only */
+  --ember: #c23800;                /* Dark Orange - Hover states */
+
+  /* Secondary Corporate Harmony */
+  --indigo-deep: #1e3a5f;          /* Professional headers, trust */
+  --slate-blue: #475569;           /* Secondary text, icons */
+  --warm-stone: #78716c;           /* Subtle accents, borders */
+
+  /* Neutral Colors (Ma - Negative Space) */
+  --sumi-black: #1a1a1a;           /* Primary text */
+  --charcoal: #333333;             /* Body text */
+  --stone: #737373;                /* Secondary text */
+  --mist: #a3a3a3;                 /* Captions, placeholders */
+  --cloud: #e5e5e5;                /* Borders, dividers */
+  --snow: #fafafa;                 /* Section backgrounds */
+  --white: #ffffff;                /* Primary background */
+
+  /* Semantic Colors (Subdued) */
+  --success: #059669;              /* Checkmarks (muted green) */
+  --warning: #d97706;              /* Alerts (muted amber) */
+  --error: #dc2626;                /* Errors (muted red) */
+  --info: #1e3a5f;                 /* Information (uses Indigo Deep) */
+
+  /* Legacy Compatibility */
+  --solunai-orange: #f5480a;
+  --solunai-orange-dark: #c23800;
+  --heat-glow: #ff6b35;
+  --forge-black: #1a1a1a;
+  --steel-navy: #1e3a5f;
+  --titanium-grey: #475569;
+
+  /* Background Colors */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --bg-dark-1: #1e3a5f;
+  --bg-dark-2: #1a1a1a;
+  --bg-off-white: #fafafa;
+  --bg-snow: #fafafa;
+  --bg-cloud: #f5f5f5;
+
+  /* Gradients (Minimal - prefer solid colors) */
+  --gradient-dark: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+  --gradient-light: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+
+  /* Borders (Subtle, Japanese aesthetic) */
+  --border-subtle: #e5e5e5;
+  --border-medium: #d4d4d4;
+  --border-strong: #a3a3a3;
+  --border-focus: #f5480a;
+
+  /* Typography - Font Families */
+  --font-inter: 'Inter', sans-serif;
+  --font-space-grotesk: 'Space Grotesk', sans-serif;
+  --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
+  --font-heading: var(--font-space-grotesk), var(--font-inter), sans-serif;
+
+  /* ============================================ */
+  /* TYPOGRAPHY SYSTEM - Standardized Sizes     */
+  /* Japanese-First Design (Nov 2025)           */
+  /* ============================================ */
+
+  /* Font Sizes - Display (Hero Statements) - BOLD & CONFIDENT */
+  --font-display-xl: 100px;  /* Was 72px - 40% increase for maximum impact */
+  --font-display-l: 90px;    /* Was 64px - 40% increase */
+  --font-display-m: 78px;    /* Was 56px - 40% increase */
+
+  /* Font Sizes - Headings - STRONG HIERARCHY */
+  --font-heading-xl: 62px;   /* Was 48px - 30% increase for clear dominance */
+  --font-heading-l: 52px;    /* Was 40px - 30% increase */
+  --font-heading-m: 42px;    /* Was 32px - 30% increase */
+  --font-heading-s: 28px;    /* Was 24px - 17% increase for card separation */
+  --font-heading-xs: 24px;   /* Was 20px - 20% increase */
+
+  /* Font Sizes - Body Text */
+  --font-body-lead: 20px;
+  --font-body-base: 16px;
+  --font-body-small: 14px;
+  --font-body-tiny: 12px;
+
+  /* Font Sizes - Interactive */
+  --font-button-lg: 18px;
+  --font-button-md: 16px;
+  --font-button-sm: 14px;
+  --font-nav-desktop: 16px;
+  --font-nav-mobile: 18px;
+
+  /* Font Sizes - Card Titles (Layout-Specific for Professional Hierarchy) */
+  --font-card-title-large: 36px;    /* 1-column cards (hero cards, feature cards) */
+  --font-card-title-medium: 32px;   /* 2-column cards (benefits, impacts) */
+  --font-card-title-small: 28px;    /* 3-column cards (value props, problems) - increased from 24px */
+  --font-card-title-compact: 18px;  /* 4+ column cards (small info cards) */
+
+  /* Font Sizes - Special Elements */
+  --font-problem-number: 36px;      /* Problem card numbers (01, 02, 03) - bold and prominent */
+
+  /* Font Sizes - Japanese (10% smaller for visual balance) */
+  --font-display-xl-jp: 90px;   /* Was 65px - scales with English increase */
+  --font-display-l-jp: 81px;    /* Was 58px - scales with English increase */
+  --font-display-m-jp: 70px;    /* Was 50px - scales with English increase */
+  --font-heading-xl-jp: 56px;   /* Was 43px - scales with English increase */
+  --font-heading-l-jp: 47px;    /* Was 36px - scales with English increase */
+  --font-heading-m-jp: 38px;    /* Was 29px - scales with English increase */
+  --font-heading-s-jp: 25px;    /* Was 22px - scales with English increase */
+  --font-heading-xs-jp: 22px;   /* Was 18px - scales with English increase */
+  --font-body-lead-jp: 18px;
+  --font-body-base-jp: 15px;
+  --font-body-small-jp: 13px;
+  --font-body-tiny-jp: 11px;
+  --font-button-lg-jp: 16px;
+  --font-button-md-jp: 15px;
+  --font-button-sm-jp: 13px;
+
+  /* Font Sizes - Card Titles Japanese (10% smaller for visual balance) */
+  --font-card-title-large-jp: 32px;    /* 10% smaller than 36px */
+  --font-card-title-medium-jp: 29px;   /* 10% smaller than 32px */
+  --font-card-title-small-jp: 25px;    /* 10% smaller than 28px */
+  --font-card-title-compact-jp: 16px;  /* 10% smaller than 18px */
+
+  /* Font Sizes - Special Elements Japanese */
+  --font-problem-number-jp: 32px;      /* 10% smaller than 36px */
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-snug: 1.4;
+  --line-height-base: 1.6;
+  --line-height-relaxed: 1.7;
+  --line-height-loose: 1.9;
+
+  /* Line Heights - Japanese (Higher for readability) */
+  --line-height-base-jp: 1.85;
+  --line-height-relaxed-jp: 1.9;
+  --line-height-loose-jp: 2.0;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.02em;
+  --letter-spacing-wider: 0.05em;
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing Scale (8px base) */
+  --spacing-xxs: 8px;
+  --spacing-xs: 16px;
+  --spacing-s: 24px;
+  --spacing-m: 40px;
+  --spacing-l: 60px;
+  --spacing-xl: 80px;
+  --spacing-xxl: 120px;
+  --spacing-xxxl: 200px;
+
+  /* Shadows (Industrial Precision - Orange Forge Glow) */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --shadow-orange: 0 8px 32px rgba(245, 72, 10, 0.25);
+  --shadow-orange-glow: 0 0 20px rgba(245, 72, 10, 0.4);
+  --shadow-orange-strong: 0 0 40px rgba(245, 72, 10, 0.5);
+  --shadow-forge: 0 12px 32px rgba(245, 72, 10, 0.3);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Card Effects (Industrial Precision) */
+  --card-hover-lift: -8px;
+  --card-hover-shadow: 0 12px 40px rgba(245, 72, 10, 0.25);
+  --card-hover-glow: 0 0 32px rgba(245, 72, 10, 0.3);
+
+  /* Section Spacing - Ma (間) Philosophy */
+  /* "The space between elements is as important as the elements themselves" */
+  --section-spacing-mobile: 64px;
+  --section-spacing-tablet: 80px;
+  --section-spacing-desktop: 120px;
+  --section-spacing-xl: 160px;
+
+  /* Container Padding - Generous breathing room */
+  --container-padding-mobile: 24px;
+  --container-padding-tablet: 32px;
+  --container-padding-desktop: 48px;
+  --container-padding-xl: 64px;
+
+  /* Content Width Constraints - Optimal reading */
+  --max-content-width: 1200px;
+  --max-text-width: 680px;         /* Optimal reading width */
+  --max-narrow-width: 800px;       /* For text-focused sections */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  font-size: var(--font-body-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[lang="ja"] body {
+  font-family: var(--font-noto-sans-jp), 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
+  font-size: var(--font-body-base-jp);
+  line-height: var(--line-height-base-jp);
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+html[lang="en"] body {
+  font-family: var(--font-inter), 'Open Sans', sans-serif;
+  font-size: var(--font-body-base);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Ensure smooth font rendering for Japanese */
+html[lang="ja"] * {
+  font-family: var(--font-noto-sans-jp), 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
+  letter-spacing: var(--letter-spacing-wide);
+}
+
+/* Optimize for English */
+html[lang="en"] * {
+  font-family: var(--font-inter), 'Open Sans', sans-serif;
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Headings use Space Grotesk for both languages */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+h1 {
+  font-size: var(--font-heading-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+h2 {
+  font-size: var(--font-heading-l);
+}
+
+h3 {
+  font-size: var(--font-heading-m);
+}
+
+h4 {
+  font-size: var(--font-heading-s);
+}
+
+h5, h6 {
+  font-size: var(--font-heading-xs);
+}
+
+/* Japanese heading adjustments */
+html[lang="ja"] h1 {
+  font-size: var(--font-heading-xl-jp);
+}
+
+html[lang="ja"] h2 {
+  font-size: var(--font-heading-l-jp);
+}
+
+html[lang="ja"] h3 {
+  font-size: var(--font-heading-m-jp);
+}
+
+html[lang="ja"] h4 {
+  font-size: var(--font-heading-s-jp);
+}
+
+html[lang="ja"] h5,
+html[lang="ja"] h6 {
+  font-size: var(--font-heading-xs-jp);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
